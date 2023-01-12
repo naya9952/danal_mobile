@@ -157,11 +157,12 @@
 }
 .block-chain .container .contents .block-chain__list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 30px;
 }
 .block-chain .container .contents .block-chain__list > li {
-  width: calc(50% - 15px);
+  width: 100%;
   padding: 30px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.15);
@@ -325,20 +326,20 @@
   z-index: 3;
 }
 .platform .btn--prev {
-  left: 50px;
+  left: 10px;
 }
 .platform .btn--prev:after {
-  font-size: 48px;
+  font-size: 28px;
   display: inline-block;
   content: "chevron_left";
   margin-left: 0;
   font-family: "Material Icons";
 }
 .platform .btn--next {
-  right: 50px;
+  right: 10px;
 }
 .platform .btn--next:after {
-  font-size: 48px;
+  font-size: 28px;
   display: inline-block;
   content: "chevron_right";
   margin-left: 0;
@@ -354,6 +355,7 @@
 
 .business .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 .business .container .title-box h2 {
@@ -363,12 +365,13 @@
   color: #297bf6;
 }
 .business .img {
-  width: 800px;
-  height: 520px;
+  width: 300px;
+  height: 300px;
   background-image: url("../images/main/img_partner.png");
   background-size: cover;
   border-radius: 50px;
   background-position: center;
+  margin-top: 20px;
 }
 
 @-webkit-keyframes arrow-move {

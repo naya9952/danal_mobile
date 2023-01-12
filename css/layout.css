@@ -150,3 +150,49 @@ button {
   overflow: hidden;
   text-shadow: 1px 1px 0px #074bb2,2px 2px 0px #074bb2,3px 3px 0px #074bb2,4px 4px 0px #074bb2,5px 5px 0px #074bb2,6px 6px 0px #074bb2,7px 7px 0px #074bb2,8px 8px 0px #074bb2,9px 9px 0px #074bb2,10px 10px 0px #074bb2,11px 11px 0px #074bb2,12px 12px 0px #074bb2,13px 13px 0px #074bb2,14px 14px 0px #074bb2,15px 15px 0px #074bb2,16px 16px 0px #074bb2,17px 17px 0px #074bb2,18px 18px 0px #074bb2,19px 19px 0px #074bb2,20px 20px 0px #074bb2;
 }
+
+.footer {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ccc;
+}
+
+.footer .upper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .upper .logo img {
+  width: 100px;
+}
+
+.footer .upper .list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.footer .upper .list li {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #999;
+}
+
+.footer .upper .list li:nth-child(1) {
+  color: #111;
+  font-weight: 700;
+}
+
+.footer .upper .select {
+  margin-left: 10px;
+  width: 250px;
+  height: 40px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.footer .lower {
+  margin-top: 30px;
+  font-size: 14px;
+}

@@ -76,7 +76,7 @@
             <a href="">윤리경영</a>
             <ul class="gnb__list--sub last">
               <li><a href="">윤리규정</a></li>
-              <li><a href="">온라인신문고</a></li>
+              <li><a href="https://www.naver.com">온라인신문고</a></li>
             </ul>
           </li>
         </ul> 
@@ -373,44 +373,35 @@
     </footer>
 
     <script>
-      //console.log(window);
-      //window.alert("아이디가 맞지 않습니다.");
-      //dom  (document object model);
-
-      //f(x) = x+5;
-
-      function plus5() {
-        console.log(x + 5);
-      }
-      function bank(money) {
-        console.log(money * 1.045);
-      }
+      // 찾아서 이벤트 걸고 제어하면 된다.
+      const btnAll = document.querySelector(".btn--all");
       const header = document.querySelector(".header");
-      const gnb = document.querySelector(".gnb");
-      gnb.addEventListener("mouseenter", function () {
-        header.classList.add("on");
-      });
-      gnb.addEventListener("mouseleave", function () {
-        header.classList.remove("on");
-      });
-
-      const swiper = new Swiper(".platform-swiper", {
-        slidesPerView: "auto",
-        spaceBetween: 50,
-        loop: true,
-        navigation: {
-          nextEl: ".platform-swiper .btn--next",
-          prevEl: ".platform-swiper .btn--prev",
-        },
-      });
-
-      window.addEventListener("scroll", function () {
-        // throttle, debounce
-        // console.log(window.scrollY);
-        if (window.scrollY > 0) {
-          header.classList.add("scroll");
-        } else {
-          header.classList.remove("scroll");
+      const depth01 = document.querySelectorAll(".gnb .gnb__list > li > a");
+      const depth02 = document.querySelectorAll(".gnb .gnb__list > li > .gnb__list--sub");
+      const total = depth01.length;
+      for(let i =0; i<total; i++){
+        depth01[i].addEventListener("click", function(e){
+        e.preventDefault();
+        for(let j=0; j<total; j++){
+          if(i !== j){
+          depth02[j].classList.remove("on");  
+          }
+        }
+        depth02[i].classList.toggle("on");
+        });
+      }
+      btnAll.addEventListener("click", function(){
+        if(header.classList.contains("on")){
+          header.classList.remove("on");
+          for(let i=0;i<total;i++){
+            setTimeout( function(){
+              depth02[i].classList.remove("on");
+            },250);
+            
+          }
+        }
+        else{
+          header.classList.add("on");
         }
       });
     </script>

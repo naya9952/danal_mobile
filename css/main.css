@@ -195,6 +195,9 @@
 .block-chain .container .contents .block-chain__list > li:nth-child(1) .title span:after {
   display: none;
 }
+.block-chain .container .contents .block-chain__list > li ul {
+  font-size: 14px;
+}
 .block-chain .container .contents .block-chain__list > li ul li {
   margin-top: 20px;
 }
@@ -243,7 +246,7 @@
   display: block;
   position: absolute;
   left: 0;
-  width: 100px;
+  width: 80px;
   top: -20px;
   bottom: -20px;
   background-color: red;
@@ -256,7 +259,7 @@
   display: block;
   position: absolute;
   right: 0;
-  width: 100px;
+  width: 80px;
   top: -20px;
   bottom: -20px;
   background-color: red;
@@ -274,16 +277,34 @@
 .platform .platform-swiper {
   position: relative;
 }
+.platform .platform-swiper .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.platform .platform-swiper .pagination .swiper-pagination-bullet {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #333;
+  background: none;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+}
+.platform .platform-swiper .pagination .swiper-pagination-bullet-active {
+  background-color: #333;
+  width: 30px;
+}
 .platform .platform-list li {
-  width: 300px;
+  width: 200px;
   position: relative;
 }
 .platform .platform-list li:hover img {
   transform: scale(1.5);
 }
 .platform .platform-list li .img-box {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -303,8 +324,9 @@
   text-transform: uppercase;
   overflow: hidden;
   text-shadow: 1px 1px 0px #074bb2,2px 2px 0px #074bb2,3px 3px 0px #074bb2,4px 4px 0px #074bb2,5px 5px 0px #074bb2,6px 6px 0px #074bb2,7px 7px 0px #074bb2,8px 8px 0px #074bb2,9px 9px 0px #074bb2,10px 10px 0px #074bb2,11px 11px 0px #074bb2,12px 12px 0px #074bb2,13px 13px 0px #074bb2,14px 14px 0px #074bb2,15px 15px 0px #074bb2,16px 16px 0px #074bb2,17px 17px 0px #074bb2,18px 18px 0px #074bb2,19px 19px 0px #074bb2,20px 20px 0px #074bb2;
-  top: 25px;
-  left: 55%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   white-space: nowrap;
   font-size: 12px;
 }
@@ -356,7 +378,6 @@
 .business .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .business .container .title-box h2 {
   color: #297bf6;
@@ -365,11 +386,11 @@
   color: #297bf6;
 }
 .business .img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  aspect-ratio: 2/1;
   background-image: url("../images/main/img_partner.png");
   background-size: cover;
-  border-radius: 50px;
+  border-radius: 20px;
   background-position: center;
   margin-top: 20px;
 }
